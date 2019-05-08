@@ -1,6 +1,6 @@
 module PlayersHelper
 
-  def player_bet(id)
+  def player_bet_amount(id)
     temperature = 26
     player = Player.find(id)
     player_money = player.money
@@ -25,4 +25,13 @@ module PlayersHelper
     player.money -= money_bet
     player.save
   end
+
+  def player_id_array
+    id_array = []
+    Player.all.each do |p|
+      id_array.append(p.id)
+    end
+    return id_array
+  end
+
 end
