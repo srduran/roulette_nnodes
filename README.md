@@ -1,4 +1,4 @@
-# README
+# Tarea Nnodes
 
 Introduccion:
 Se debe realizar una simulacion, la cual consiste en un grupo dinamico de personas jugando a la
