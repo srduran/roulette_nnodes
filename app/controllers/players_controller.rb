@@ -6,7 +6,7 @@ class PlayersController < ApplicationController
   # GET /players.json
   def index
     @players = Player.all
-    player_bet(1)
+    player_bet(15)
   end
 
   # GET /players/1
