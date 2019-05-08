@@ -6,9 +6,6 @@ class PlayersController < ApplicationController
   # GET /players.json
   def index
     @players = Player.all
-    player_id_array.each do |a|
-      player_bet_amount(a)
-    end
   end
 
   # GET /players/1
