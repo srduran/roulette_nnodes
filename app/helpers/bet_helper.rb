@@ -22,8 +22,4 @@ module BetHelper
     return 0
   end
 
-  def save_game_data
-  end
-
-
 end

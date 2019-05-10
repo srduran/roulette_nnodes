@@ -1,8 +1,7 @@
 module PlayersHelper
 
-  def player_bet_amount(id)
+  def player_bet_amount(player)
     temperature = 26
-    player = Player.find(id)
     player_money = player.money
     puts player.name
     if player_money == 0

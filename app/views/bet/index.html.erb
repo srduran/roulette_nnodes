@@ -1,1 +1,27 @@
-Holaaa
+<h1>Betting Room</h1>
+<div style="margin:100px">
+  <table>
+    <tbody>
+      <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Number of Game</th>
+        <th scope="col">Name</th>
+        <th scope="col">Money Bet</th>
+        <th scope="col">Player Color</th>
+        <th scope="col">Roulette Color</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @bets.each do |bet| %>
+        <tr>
+          <td><%= bet.roulette.game_number %></td>
+          <td><%= bet.player.name %></td>
+          <td><%= bet.player_bet %></td>
+          <td><%= bet.player_color %></td>
+          <td><%= bet.roulette.game_color %></td>
+          <td><%= bet.player_gain %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
