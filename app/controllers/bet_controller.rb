@@ -4,6 +4,7 @@ class BetController < ApplicationController
 
   def index
       @bets = Bet.all
+      game_simulation
     #BetJob.perform_now
   end
 
