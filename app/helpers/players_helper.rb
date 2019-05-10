@@ -11,11 +11,11 @@ module PlayersHelper
       update_bet_money(player, player_money)
       return player_money
     elsif temperature > 25
-      money_bet = (rand(3..7)/100.0)*player_money
+      money_bet = ((rand(3..7)/100.0)*player_money).to_i
       update_bet_money(player, money_bet)
       return money_bet
     else
-      money_bet = (rand(8..15)/100.0)*player_money
+      money_bet = ((rand(8..15)/100.0)*player_money).to_i
       update_bet_money(player, money_bet)
     return money_bet
     end
