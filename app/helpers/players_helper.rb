@@ -27,10 +27,10 @@ module PlayersHelper
   end
 
   def update_money_earnings(player, money_earning)
-    player.money + = money_earning
+    player.money += money_earning
     player.save
   end
-  
+
   def player_id_array
     id_array = []
     Player.all.each do |p|
