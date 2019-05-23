@@ -19,6 +19,9 @@
 
 # Learn more: http://github.com/javan/whenever
 
+set :output, "log/cron_log.log"
+env :PATH, ENV['PATH']
+
 every 1.minute do
-  runner "BetJob.perform_now"
+  runner "Bet.game_simulation"
 end
