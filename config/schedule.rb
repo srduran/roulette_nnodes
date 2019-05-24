@@ -22,6 +22,6 @@ set :output, {:error => "log/cron_error_log.log", :standard => "log/cron_log.log
 env :GEM_HOME, ENV['GEM_HOME']
 
 every 1.minute do
-  runner "BetJob.perform_now"
-  #rake "game_task:roulette_simulation"
+  #runner "BetJob.perform_now"
+  rake "game_task:roulette_simulation"
 end
