@@ -23,5 +23,5 @@ env :GEM_HOME, ENV['GEM_HOME']
 
 every 1.minute do
   #runner "BetJob.perform_now"
-  rake "game_task:roulette_simulation"
+  rake "roulette_simulation"
 end
