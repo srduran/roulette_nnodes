@@ -12,7 +12,7 @@ module BetHelper
   end
 
   def gain(player_color, roulette_color, player_bet)
-    if player_color == roulette_color
+    if player_color == roulette_color 
       if player_color == "green"
         return player_bet*15
       else

@@ -5,8 +5,6 @@
 
 # Example:
 #
-# set :output, "/path/to/my/cron_log.log"
-#
 # every 2.hours do
 #   command "/usr/bin/some_great_command"
 #   runner "MyModel.some_method"
@@ -19,9 +17,11 @@
 
 # Learn more: http://github.com/javan/whenever
 
-set :output, "log/cron_log.log"
-env :PATH, ENV['PATH']
+set :output, {:error => "log/cron_error_log.log", :standard => "log/cron_log.log"}
+#ENV.each { |k, v| env(k, v) }
+env :GEM_HOME, ENV['GEM_HOME']
 
 every 1.minute do
-  runner "Bet.game_simulation"
+  runner "BetJob.perform_now"
+  #rake "game_task:roulette_simulation"
 end
